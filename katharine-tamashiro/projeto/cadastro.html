@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Pravaler | Crédito Universitário</title>
+    <link rel="shortcut icon" type="image/x-icon" href="https://www.pravaler.com.br/wp-content/uploads/2019/09/cropped-favicon-prv-32x32.png">
+    <meta charset="utf-8">
+    <!-- <script type="text/css" src="style.css"></script> -->
+    <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+    <script type="text/javascript" src="funcoes.js"></script>
+    <script>
+      $(document).ready(function (){
+        $('.data').mask('00/00/0000');
+        $('.celular').mask('(00) 00000-0000');
+        $('.cpf').mask('000.000.000-00', {reverse: true});
+        $('.renda').mask("#.##0,00", {reverse: true});
+      });
+    </script>
+
+    <style type="text/css">
+      body {
+        margin: 0;
+        font-family: Muli, Helvetica, Arial, sans-serif;
+        background-image: url("img/cadastro-bg7.jpg");
+        background-size: cover;
+      }
+      .nav-bar {
+        display: block;
+        height: 80px;
+        width: 100%;
+        background-color: #3a4950;
+      }
+
+      .nav-img {
+        display: block;
+        position: relative;
+        left: 50%;
+        top: 50%;
+        height: 30px;
+        transform: translate(-50%, -50%);
+      }
+
+      form {
+        display: table;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 30px;
+        padding: 20px 60px;
+        background-color: rgb(172, 172, 172, 0.7);
+      }
+
+      .campos {
+        display: grid;
+        margin-bottom: 20px;
+      }
+
+      .campos label {
+        font-size: 20px;
+        padding-left: 5px;
+        padding-right: 5px;
+      }
+
+      .campos input {
+        font-size: 18px;
+        border-radius: 7px;
+        padding-left: 5px;
+        padding-right: 5px;
+      }
+
+      .botao {
+        display: block;
+        padding: 5px 20px;
+        margin: 0 auto;
+        font-size: 20px;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        outline: none;
+        color: #fff;
+        background-color: #f15d22;
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0 4px #999;
+      }
+
+      .botao:hover {
+        background-color: #C3501E
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="nav-bar">
+      <img src="https://www.pravaler.com.br/wp-content/uploads/2019/08/logo-negativo.png" class="nav-img">
+    </div>
+    <form name="form1" method="post" action="cadastro-confirmar.php" onsubmit="return validarVazio()" required>
+      <h1>Formulário de Cadastro</h1>
+      <div class="campos">
+        <label>Nome Completo:</label>
+        <input type="text" name="nome" placeholder="Nome Completo" tabindex="1">
+      </div>
+      <div class="campos">
+        <label>Data de Nascimento:</label>
+        <input type="text" class="data" name="data_nascimento" placeholder="dd/mm/aaaa" tabindex="2">
+      </div>
+      <div class="campos">
+        <label>CPF:</label>
+        <input type="text" name="cpf" class="cpf" placeholder="000.000.000-00" tabindex="3">
+      </div>
+      <div class="campos">
+        <label>E-mail:</label>
+        <input type="email" name="email" placeholder="nome@email.com" tabindex="4">
+      </div>
+      <div class="campos">
+        <label>Celular com DDD:</label>
+        <input type="text" class="celular" name="celular" placeholder="(00) 00000-0000" tabindex="5">
+      </div>
+      <div class="campos">
+        <label>Renda:</label>
+        <input type="text" class="renda" name="renda" placeholder="R$" tabindex="6">
+      </div>
+      <div class="campos" style="display: block;">
+        <label>Sexo:</label>
+        <input type="radio" name="sexo" value="masc" style="margin-left: 10px;" tabindex="7" checked>Masculino
+        <input type="radio" name="sexo" value="fem" style="margin-left: 10px;">Feminino
+        <input type="radio" name="sexo" value="outro" style="margin-left: 10px;" >Outro
+      </div>
+      <div class="campos">
+        <label>Renda do Garantidor:</label>
+        <input type="text" class="renda" name="renda_garantidor" placeholder="R$" tabindex="8">
+      </div>
+      <button class="botao" tabindex="9">Enviar</button>
+    </form>
+  </body>
+  <footer>
+
+  </footer>
+
+</html>

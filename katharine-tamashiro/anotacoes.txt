@@ -1,0 +1,20 @@
+Servidor:
+ip: 192.175.105.179
+usu�rio: fic
+senha: Fic##132
+endere�o tempor�rio: http://wcc.com.br.solidcp.temp-address.com/katharine-tamashiro
+
+Banco de dados
+endere�o: http://192.175.105.180/phpMyAdmin/
+utilizador: fic
+senha: Fic##132
+
+Extens�es do VS Code:
+- para identar o c�digo: PHP Intelephense (ctrl+shif+f)
+- para completar palavras: PHP Intellisense
+- Highlight Maching Tag
+
+Programa para criar a parte gr�fica do site, antes de programar: Corel Draw
+
+verificar se o arquivo php est� rodando localmente: http://localhost/wcc/
+

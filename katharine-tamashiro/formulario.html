@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        function verificarSomenteLetras(){
+            //var
+            var nomeValor = document.getElementById("nome").value;
+
+            if(nomeValor == ""){
+                //window.alert("preencha o campo");
+                document.getElementById("erroVazio").style.display = "block";
+            }
+            else {
+                document.getElementById("erroVazio").style.display = "none";
+            }
+
+            if (nomeValor.match(/^[A-Za-z\s]+$/)){
+                document.getElementById("erroCaractereProbido").style.display = "none";
+            }
+            else {
+                //window.alert("caractere não permitido");
+                document.getElementById("erroCaractereProbido").style.display = "block"; 
+            }
+        }
+    </script>
+</head>
+<body>
+    Nome: <input type="text" id="nome" name="name" value="" />
+    <br>
+    <div id="erroVazio" style="color: red; display: none;">
+        Campo vazio
+    </div>
+    <div id="erroCaractereProbido" style="color: red; display: none;">
+        Caractere não permitido
+    </div>
+    <button onclick="verificarSomenteLetras();">
+        Verificar
+    </button>
+</body>
+</html>

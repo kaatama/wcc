@@ -1,0 +1,13 @@
+nome da tabela: pravaler_katharine_tamashiro
+id - primary key - serial
+nome - varchar(50) - not null
+cpf - varchar(15) - unique - not null
+email - varchar(50) - unique - not null
+celular - varchar(50) - not null
+data_nascimento - date - not null
+sexo - varchar(10) - not null
+renda - real - not null
+renda_garantidor - real - not null
+data_cadastro - timestamp - not null
+
+

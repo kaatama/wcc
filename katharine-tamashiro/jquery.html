@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JQuery</title>
+    <!-- Jquery-->
+    <script src="jquery/jquery-3.4.1.js"></script>
+
+    <!--Funcoes personalizadas-->
+    <script src="js/funcoes.js"></script>
+
+    <script>
+        function javaClick(){
+            var elemento = document.getElementById("divTeste");
+
+            elemento.style.display = "none";
+        }
+
+        $(document).ready(function(){
+            $("#btoClickJQuery").on("click", function () {
+                $("#divTeste").css({
+                    //display: "none",
+                   // width: "600px",
+                    backgroundColor: "red",
+                }); //funcionando
+
+                //$("#divTeste").css("display", "none"); //funcionando
+                //document.getElementById("divTeste").style.display = "none"; //funcionando
+                //$(this).width(750); //funcionando
+                //$(this).css("display", "none");
+
+                $("#divTeste").html("teste");
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="divTeste" style="position: relative; 
+                             display: block; 
+                             width: 150px; 
+                             height: 100px; 
+                             background-color: aquamarine;">
+    
+    </div>
+    <button id="btoClick" onclick="javaClick();">Javascript</button>
+    <button id="btoClickJQuery" >JQuery</button>
+    <script>
+       
+       
+    </script>
+</body>
+</html>

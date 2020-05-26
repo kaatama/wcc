@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <!-- Jquery-->
+        <script src="jquery/jquery-3.4.1.js"></script>
+        <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>-->
+
+        <script>
+            $(document).ready(function(){
+                $("#btoJquery").on("click", function () {
+                    //$("li a").css("display", "none");
+                    $("input").val("sssdsd sdfsf");
+                });
+
+                $("#saiba").hover(
+                    function(){
+                        $("#teste").show();
+                    },
+                    function(){
+                        $("#teste").hide();
+                    }
+                );
+            });
+        </script>
+
+        <style>
+            .links-topo {
+                color: #667292;
+                text-decoration: none;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 14px;
+            }
+            .links-topo:hover {
+                color: #ffffff;
+            }
+            .btn {
+                position: absolute;
+                display: block;
+                border: 2px solid #ffffff;
+                border-radius: 3px;
+                width: 130px;
+                height: 30px;
+                right: 0;
+                left: 0;
+                margin-right: auto;
+                margin-left: auto;
+                line-height: 30px; /* deixar igual ao height para centralizar verticalmente*/
+                bottom: 100px;
+                background-color: transparent;
+                color: #ffffff;
+                text-align: center;
+                text-decoration: none;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 16px;
+            }
+            .btn:hover {
+                background-color: #ffffff;
+                color: #667292;
+            }
+            .nav {
+                position: absolute;
+                display: block;
+                right: 0;
+                top: 50px;
+            }
+            .li-nav {
+                display: inline-block;
+                margin-left: 15px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: bold;
+            }
+            .li-nav:before {
+                content: '\00a0\2022'; /* cria a bolinha*/
+                color: #ffffff;
+                padding: 0px;
+                margin: 0px;
+            }
+            .li-nav:first-child:before {
+                content: '';
+            }
+            .li-nav:hover {
+                border-bottom: 2px solid #ffffff;
+            }
+            .link-nav {
+                color: #ffffff;
+                text-transform: uppercase;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 15px;
+                text-decoration: none;
+            }
+            h1 {
+                position: absolute;
+                display: block;
+                width: 100%;
+                top: 300px;
+                text-align: center;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 40px;
+                color: #ffffff;
+                text-transform: uppercase;
+            }
+            h2 {
+                position: absolute;
+                display: block;
+                width: 100%;
+                top: 375px;
+                text-align: center;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 20px;
+                font-weight: none;
+                color: #ffffff;
+            }
+            .barra-fixa {
+                position: absolute;
+                display: block;
+                bottom: -35px;
+                margin-left: auto;
+                margin-right: auto;
+                left: 0;
+                right: 0; 
+                width: 1000px;
+                box-sizing: border-box;
+                height: 70px;
+                background-color: #ffffff;
+                border: 12px solid #056a7d;
+            }
+            .span {
+                position: relative;
+                display: inline-block;
+                box-sizing: border-box;
+                width: 20%;
+                height: 20px;
+                font-family: Arial, Helvetica, sans-serif;
+                color: #999999;
+                text-decoration: none;
+                text-indent: 20px;
+                border-right: 1px solid #00000000;
+                margin-top: 12px;
+            }
+            .div-conteudo {
+                position: relative; 
+                display: block; 
+                width: 100%; 
+                height: 400px;
+                margin-top: 70px;
+            }
+            .div-destinos {
+                position: relative;
+                display: block;
+                width: 1000px;
+                height: 100%;
+                margin-left: auto;
+                margin-right: auto;
+                text-align: center;
+            }
+            .div-cidades {
+                position: relative;
+                display: inline-block;
+                width: 300px;
+                text-align: left;
+                margin-left: 20px;
+            }
+            .cidades-img {
+                position: relative;
+                display: block;
+                width: 300px;
+                height: 150px;
+            }
+            .cidades-link {
+                position: relative;
+                display: block;
+                color: #000000;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 16px;
+                text-decoration: none;
+                font-weight: bold;
+                color: #003f4e;
+                margin-top: 10px;
+                margin-bottom: 5px;
+            }
+            .cidades-desc {
+                position: relative;
+                display: block;
+                color: #00a8a7;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 14px;
+            }
+            .ft-div {
+                height: 150px;
+                width: 75%;
+                margin: auto;
+                padding-top: 20px;
+            }
+            .ft-ul {
+                position: relative;
+                display: inline-grid;
+            }
+            .ft-li {
+                text-decoration: none;
+            }
+        </style>
+    </head>
+    <body style="margin: 0px; padding: 0px;">
+        <div style="position: relative;
+                    display: block;
+                    width: 100%;
+                    height: 570px;
+                    background-color: #bccad6; ">
+            <div style="position: relative;
+                        display: block;
+                        width: 1000px;
+                        height: 100%;
+                        background-color: #8d9db6;
+                        margin-left: auto;
+                        margin-right: auto;">
+                <img src="img/layout-logo.png" style="width: 150px;
+                                                    margin-top: 10px" />
+                <div style="position: absolute;
+                            display: block;
+                            top: 0px;
+                            right: 0px;
+                            /*width: 350px;*/
+                            height: 40px;
+                            line-height: 40px;
+                            /*background-color: #66c2ff; */
+                            border-bottom: 1px solid #f1e3dd;">
+                    <a class="links-topo" href="#" style="border-right: 1px solid #f1e3dd; margin-right: 10px; padding-right: 10px;">
+                        EXTRANET
+                    </a>
+                    <a class="links-topo" href="#">
+                        PORTAL DO INVESTIDOR
+                    </a>
+                </div>
+                <div class="nav">
+                    <ul style="margin: 0px; padding: 0px;">
+                        <li class="li-nav">
+                            <a href="#" class="link-nav">
+                                Link 1
+                            </a>
+                        </li>
+                        <li class="li-nav">
+                            <a href="#" class="link-nav">
+                                Link 2
+                            </a>
+                        </li>
+                        <li class="li-nav">
+                            <a href="#" class="link-nav">
+                                Link 3
+                            </a>
+                        </li>
+                        <li class="li-nav">
+                            <a href="#" class="link-nav">
+                                Link 4
+                            </a>
+                        </li>
+                        <li class="li-nav">
+                            <a href="#" class="link-nav">
+                                Link 5
+                            </a>
+                        </li>
+                        <li class="li-nav">
+                            <a href="#" class="link-nav">
+                                Link 6
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <h1 class="h1">
+                    Invista com segurança
+                </h1>
+                <h2 class="h2">
+                    A rede Hampton by Hilton chegou ao Brasil. Faça parte desta história!
+                </h2>
+                <button class="btn" id="saiba">
+                    Saiba Mais
+                </button>
+                <div id="teste" style="background-color: red; 
+                                       position: absolute; 
+                                       margin-left: auto; 
+                                       margin-right: auto; 
+                                       left: 0; 
+                                       right:0; 
+                                       width: 130px;
+                                       height: 40px;
+                                       top: 480px;" >
+                    <a href="" style="display: block;">lalala</a>
+                    <a href="">lelelele</a>
+
+                </div>
+                <button id="btoJquery">
+                    Teste com JQuery
+                </button>
+                <input type="text" value="">
+            </div>
+            
+            <div class="barra-fixa">
+                <span class="span">
+                    Hotel
+                </span>
+                <span class="span">
+                    Check-in - Check-out
+                </span>
+                <span class="span">
+                    Hóspedes
+                </span>
+                <span class="span" style="border-right: none;">
+                    Cod. Promocional
+                </span>
+                <span class="span" style="border-right: none; 
+                                          float: right;
+                                          text-align: center; 
+                                          text-indent: 0px; 
+                                          color: #056a7d; 
+                                          font-weight: bold;
+                                          background-color: #ddf503;
+                                          height: 100%;
+                                          line-height: 46px;
+                                          margin-top: -32px;">
+                    Reserve
+                </span>
+            </div>
+        </div>
+
+        <!--Conteúdo-->
+        <div class="div-conteudo">
+            <div class="div-destinos">
+                <div class="div-cidades">
+                    <img scr="" class="cidades-img">
+                    <a href="#" class="cidades-link">Rio de Janeiro</a>
+                    <div class="cidades-desc">Aproveite os encantos da cidade maravilhosa</div>
+                </div>
+                <div class="div-cidades">
+                    <img scr="" class="cidades-img">
+                    <a href="#" class="cidades-link">São Paulo</a>
+                    <div class="cidades-desc">Conheça o incomparável charme paulistano</div>
+                </div>
+                <div class="div-cidades">
+                    <img scr="" class="cidades-img">
+                    <a href="#" class="cidades-link">Cabo Frio</a>
+                    <div class="cidades-desc">Um paraíso tropical ao seu alcance</div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+
+    <footer class="footer" style="background-color: #8d9db6; width: 100%;   ">
+        <div class="ft-div">
+            <ul class="ft-ul">
+                Hotelaria Brasil
+                <li class="ft-li">
+                    Quem Somos
+                </li>
+                <li class="ft-li">
+                    Seu Evento
+                </li>
+                <li class="ft-li">
+                    Contato
+                </li>
+            </ul>
+            <ul class="ft-ul">
+                Descubra
+                <li class="ft-li">
+                    Ofertas
+                </li>
+                <li class="ft-li">
+                    Nossos Hotéis
+                </li>
+                <li class="ft-li">
+                    Fidelidade
+                </li>
+            </ul>
+            <ul class="ft-ul">
+                Investimentos
+                <li class="ft-li">
+                    Quero Investir
+                </li>
+                <li class="ft-li">
+                    Portal do Investidor
+                </li>
+            </ul>
+            <ul class="ft-ul">
+                Recursos
+                <li class="ft-li">
+                    Extranet
+                </li>
+                <li class="ft-li">
+                    Universidade Corporativa
+                </li>
+                <li class="ft-li">
+                    Termos de Uso   
+                </li>
+                <li class="ft-li">
+                    Políticas de Privacidade
+                </li>
+            </ul>
+            <ul class="ft-ul">
+                Reservas
+                <li class="ft-li">
+                    0800 014 4040
+                </li>
+                <li class="ft-li">
+                    reservas@hotelariabrasil.com.br
+                </li>
+            </ul>
+        </div>
+    </footer>
+</html>
